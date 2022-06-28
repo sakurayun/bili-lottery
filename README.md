@@ -19,8 +19,9 @@
 ### 食用方法
 1. 下载 Release 中的文件，哪个平台就下哪个
 2. 解压文件，将 `example.toml` 复制或改名为 `config.toml`
-3. 在终端中运行 `./bili-lottery-tool` (Windows 用户运行 `./bili-lottery-tool.exe`)
-4. 可使用 -c 选择配置文件 `./bili-lottery-tool -c /etc/bili/config.toml`
+3. 填写你的动态ID, 并可选择修改权重及可选项
+4. 在终端中运行 `./bili-lottery-tool` (Windows 用户运行 `./bili-lottery-tool.exe`)
+5. 可使用 -c 选择配置文件 `./bili-lottery-tool -c /etc/bili/config.toml`
 
 ## 配置文件
 
