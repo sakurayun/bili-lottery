@@ -1,0 +1,38 @@
+#版本号
+Version="1.0"
+
+# 权重
+[Weights]
+Forward = 1  # 转发
+Comment = 1  # 评论
+Like = 1     # 点赞
+Fan = 5      # 粉丝
+Friend = 10  # 互关
+VIP = 2      # 大会员
+
+# 可选项
+[Select]
+Level = 0    # 排除几级以下的用户, 0 为不排除
+Member = 0   # 黑幕, 填写 UID, 直接抽这位用户
+Time = 120   # 抓取间隔, 单位 s
+EndTime = 1656648000  # 结束时间, 为 0 或已超时则直接出结果
+
+# 动态
+[Dynamic]
+Id = ""      # 动态ID, 需要填写
+Oid = ""     # 自动获取，无需填写
+Type = 0     # 自动获取，无需填写
+
+# Cookie，无需填写
+[Cookies]
+SESSDATA = ""
+bili_jct = ""
+DedeUserID = ""
+DedeUserID__ckMd5 = ""
+
+# 代理
+[ProxyURL]
+api = ""
+api_vc = ""
+api_live = ""
+
