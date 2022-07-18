@@ -120,6 +120,7 @@ func getDynamicInfo() {
 func getForwardList() {
 	offset := 0
 	forward := &ForwardList{}
+	log.Println("获取转发列表中...")
 
 	for {
 		params := map[string]string{
@@ -177,6 +178,7 @@ func getCommentList() {
 
 	next := 0
 	comments := &CommentList{}
+	log.Println("获取评论列表中...")
 
 	//switch config.Dynamic.Type {
 	//
@@ -237,6 +239,7 @@ func getCommentList() {
 func getLikeList() {
 	pn := 0
 	likes := &LikeList{}
+	log.Println("获取点赞列表中...")
 
 	for {
 		params := map[string]string{
@@ -288,6 +291,7 @@ func getLikeList() {
 // 获取用户关系
 func getRelation() {
 	pn := 1
+	log.Println("获取粉丝列表中...")
 
 	headers := map[string]string{
 		"dnt":        "1",
