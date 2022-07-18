@@ -412,6 +412,10 @@ func weightCalculate() {
 		}
 	}
 
+	if len(weightList) == 0 {
+		log.Fatalln("当前没有参与抽奖的用户，Mika 觉得你好可怜喵～")
+	}
+
 Loop:
 	n, err := rand.Int(rand.Reader, big.NewInt(int64(len(weightList))))
 	if config.Select.Member == 0 {
