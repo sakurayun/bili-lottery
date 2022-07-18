@@ -83,6 +83,7 @@ func searchDB(key string, mid int) int {
 
 	for rows.Next() {
 		err = rows.Scan(&result)
+		checkErr(err)
 	}
 
 	return result
@@ -142,6 +143,12 @@ func initHTTP() {
 	api.SetTimeout(10 * time.Second)
 	apiVc.SetTimeout(10 * time.Second)
 	apiLive.SetTimeout(10 * time.Second)
+
+	api.SetRetryCount(3)
+	apiVc.SetRetryCount(3)
+	apiLive.SetRetryCount(3)
+	client.SetRetryCount(3)
+	login.SetRetryCount(3)
 
 	client.SetBaseURL("https://api.bilibili.com/x")
 	login.SetBaseURL("https://passport.bilibili.com")
