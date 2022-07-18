@@ -10,7 +10,7 @@ arm64linux:
 	tar zcvf bili-lottery-tool-linux-arm64.tar.gz bili-lottery-tool example.toml README.md
 
 amd64windows:
-	CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -o bili-lottery-tool.exe *.go
+	CGO_ENABLED=1 CXX=x86_64-w64-mingw32-g++ CC=x86_64-w64-mingw32-gcc GOOS=windows GOARCH=amd64 go build -o bili-lottery-tool.exe *.go
 	tar zcvf bili-lottery-tool-windows-amd64.tar.gz bili-lottery-tool.exe example.toml README.md
 
 amd64mac:
