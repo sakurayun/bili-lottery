@@ -28,6 +28,7 @@ var (
 	filePath, tableName string
 )
 
+// 初始化
 func init() {
 	var (
 		fileName, dbName, dbPath string
@@ -36,6 +37,7 @@ func init() {
 
 	flag.StringVar(&fileName, "c", "./config.toml", "Path to config file.")
 	flag.StringVar(&dbName, "d", "./bili.db", "Path to db.")
+	flag.Parse()
 
 	// 获取配置文件的绝对路径
 	filePath, err = filepath.Abs(fileName)
@@ -82,6 +84,10 @@ func main() {
 
 	// 执行任务
 	taskStart()
+
+	// 关闭数据库
+	err = db.Close()
+	checkErr(err)
 }
 
 func checkErr(err error) {
